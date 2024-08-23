@@ -23,6 +23,7 @@ int (*get_ops(char a))(va_list)
 		{'%', percent_print},
 		{'d', num_print},
 		{'i', num_print},
+		{'b', bin_print},
 		{0, NULL}
 	};
 

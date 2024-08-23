@@ -27,5 +27,7 @@ int char_print(va_list arguments);
 int str_print(va_list arguments);
 int percent_print(va_list arguments);
 int num_print(va_list arguments);
+int bin_print(va_list arguments);
+
 
 #endif /* MAIN_H */
