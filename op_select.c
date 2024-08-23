@@ -24,6 +24,10 @@ int (*get_ops(char a))(va_list)
 		{'d', num_print},
 		{'i', num_print},
 		{'b', bin_print},
+		{'u', unsigned_int_print},
+		{'o', octal_print},
+		{'x', hex_lower_print},
+		{'X', hex_upper_print},
 		{0, NULL}
 	};
 

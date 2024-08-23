@@ -28,6 +28,9 @@ int str_print(va_list arguments);
 int percent_print(va_list arguments);
 int num_print(va_list arguments);
 int bin_print(va_list arguments);
-
+int octal_print(va_list arguments);
+int hex_lower_print(va_list arguments);
+int hex_upper_print(va_list arguments);
+int unsigned_int_print(va_list arguments);
 
 #endif /* MAIN_H */
