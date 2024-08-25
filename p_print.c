@@ -45,7 +45,7 @@ int p_print(va_list arguments)
 		array[b] = array[end];
 		array[end] = temp;
 	}
-	write(1, array, 1);
+	write(1, array, a);
 	c++;
 
 	return c;
