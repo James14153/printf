@@ -26,8 +26,8 @@ int S_print(va_list arguments)
 	{
 		if (string[a] < 32 || string[a] >= 127)
 		{
-			array[j] = not_printable[0];
-			array[j] = not_printable[1];
+			array[j++] = not_printable[0];
+			array[j++] = not_printable[1];
 			sprintf(hex, "%02X", (unsigned char)string[a]);
 			array[j++] = hex[0];
 			array[j++] = hex[1];
