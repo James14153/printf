@@ -28,6 +28,7 @@ int (*get_ops(char a))(va_list)
 		{'o', octal_print},
 		{'x', hex_lower_print},
 		{'X', hex_upper_print},
+		{'S', S_print},
 		{0, NULL}
 	};
 
