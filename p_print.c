@@ -39,7 +39,7 @@ int p_print(va_list arguments)
 			number /= 16;
 		}
 
-	for (int b = 2; end = a - 1; b++; end--)
+	for (int b = 2; end = a - 1; b < end; b++; end--)
 	{
 		char temp = array[b];
 		array[b] = array[end];
