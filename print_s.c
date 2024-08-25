@@ -28,14 +28,10 @@ int S_print(va_list arguments)
 		{
 			array[j] = not_printable[0];
 			array[j] = not_printable[1];
-			b += 2;
-
 			sprintf(hex, "%02X", (unsigned char)string[a]);
 			array[j++] = hex[0];
 			array[j++] = hex[1];
-			b += 2;
-			write(1, hex, 2);
-			b++;
+			b += 4;
 		}
 		else
 		{
@@ -49,6 +45,7 @@ int S_print(va_list arguments)
 			j = 0;
 		}
 	}
+
 
 	if (j > 0)
 	{
