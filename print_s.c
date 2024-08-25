@@ -55,5 +55,5 @@ int S_print(va_list arguments)
 		write(1, array, j);
 
 	}
-	return b++;
+	return b;
 }
