@@ -19,7 +19,7 @@ int p_print(va_list arguments)
 
 	if (!ptr)
 	{
-		return (write(1, "(Null)", 5));
+		return (write(1, "(Null)", 6));
 	}
 
 	number = (unsigned long)ptr;
@@ -32,7 +32,7 @@ int p_print(va_list arguments)
 		number /= 16;
 	}
 
-	for (b = a -1; b >= 0; b--)
+	for (b = a - 1; b >= 0; b--)
 	{
 		write(1, &array[b], 1);
 		c++;
