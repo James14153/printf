@@ -15,7 +15,7 @@ int p_print(va_list arguments)
 	unsigned long number;
 	char *hx = "0123456789abcdef";
 	int a = 2; 
-	int b, c = 0;
+	int c = 0;
 
 	if (!ptr)
 	{
@@ -39,14 +39,13 @@ int p_print(va_list arguments)
 			number /= 16;
 		}
 
-	for (b = 2; end = a - 1; b++; end--)
+	for (int b = 2; end = a - 1; b++; end--)
 	{
 		char temp = array[b];
 		array[b] = array[end];
 		array[end] = temp;
 	}
-	write(1, array, a);
-	c++;
+	c = write(1, array, a);
 
 	return c;
 }
