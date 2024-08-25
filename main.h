@@ -33,5 +33,6 @@ int hex_lower_print(va_list arguments);
 int hex_upper_print(va_list arguments);
 int unsigned_int_print(va_list arguments);
 int S_print(va_list arguments);
+int p_print(va_list arguments);
 
 #endif /* MAIN_H */
