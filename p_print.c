@@ -3,12 +3,13 @@
 /*
  * p_print - pprints the address of pointer in hexadecimal
  * @arguments: takes a list of argumentst
+ * @flags: checks for active flags
  *
  * returns the number of characters printed
  *
  */
 
-int p_print(va_list arguments)
+int p_print(va_list arguments, int flags)
 {
 	void *ptr = va_arg(arguments, void *);
 	char array[50];
@@ -16,6 +17,8 @@ int p_print(va_list arguments)
 	char *hx = "0123456789abcdef";
 	int a = 2;
 	int b, j, c = 0;
+
+	(void)flags;
 
 	if (!ptr)
 	{
