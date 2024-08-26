@@ -9,7 +9,7 @@
  * return the number of characters printed
  */
 
-int num_print(va_list arguments)
+int num_print(va_list arguments, int flags)
 {
         char array[50];
         int a = 0;
@@ -30,6 +30,14 @@ int num_print(va_list arguments)
                 num_negative = 1;
                 number = -number;
         }
+	else if (flags & FLAG_PLUS)
+	{
+		array[a++] = 'a';
+	}
+	else if (flags & FLAG_SPACE)
+	{
+		array[a++] = ' ';
+	}
 
         if (number == 0)
         {

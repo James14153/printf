@@ -18,13 +18,13 @@
 int (*get_ops(char a))(va_list)
 {
 	specifier_function format_specifiers[] = {
-		{'c', char_print},
-		{'s', str_print},
-		{'%', percent_print},
+		{'c', (int (*)(va_list, int))char_print},
+		{'s', (int (*)(va_list, int))str_print},
+		{'%', (int (*)(va_list, int))percent_print},
 		{'d', num_print},
 		{'i', num_print},
-		{'b', bin_print},
-		{'u', unsigned_int_print},
+		{'b', (int (*)(va_list, int))bin_print},
+		{'u', (int (*)(va_list, int))unsigned_int_print},
 		{'o', octal_print},
 		{'x', hex_lower_print},
 		{'X', hex_upper_print},

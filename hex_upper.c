@@ -4,12 +4,12 @@
  * hex_upper_print - converts a digit to hexadecimal form
  * in uppercase
  * @arguments: takes a list of arguments
- *
+ * @flags: indicates which flags are active
  * return the number of printed characters
  *
  */
 
-int hex_upper_print(va_list arguments)
+int hex_upper_print(va_list arguments, int flags)
 {
         int a = 0;
         int b;
@@ -24,6 +24,10 @@ int hex_upper_print(va_list arguments)
         }
         else
         {
+		if (flags & FLAG_HASH)
+		{
+			array[a++] = '0';
+		}
                 while (number > 0)
                 {
                         array[a++] = str[number % 16];

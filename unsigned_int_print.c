@@ -3,7 +3,7 @@
 /*
  * unsigned_int_print - prints an unsigned int in decimal
  * @arguments: the list of arguments
- *
+ * 
  * return 0 if success
  *
  */

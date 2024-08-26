@@ -7,7 +7,7 @@
  * return the number of characters printed
  */
 
-int octal_print(va_list arguments)
+int octal_print(va_list arguments, int flags)
 {
 	int a = 0;
 	int b;
@@ -20,7 +20,12 @@ int octal_print(va_list arguments)
 		array[a++] = '0';
 	}
 	else
+
 	{
+		if (flags & FLAG_HASH)
+		{
+			array[a++] = '0';
+		}
 		while (number > 0)
 		{
 			array[a++] = (number % 8) + '0';
