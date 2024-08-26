@@ -3,18 +3,20 @@
 /*
  * bin_print - prints an unsigned int in binary
  * @arguments: the list of arguments
- *
+ * @flags: checks for active flags
  * return 0 if success
  *
  */
 
-int bin_print(va_list arguments)
+int bin_print(va_list arguments, int flags)
 {
 	int a = 0;
 	int b;
 	int k = 0;
 	char array[32];
 	unsigned int number = va_arg(arguments, int);
+
+	(void)flags;
 
 	if (number == 0)
 	{

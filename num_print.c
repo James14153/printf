@@ -5,7 +5,7 @@
 /*
  * num_print - printsboth positive and negative numbers
  * @arguments: takes a list of arguments
- *
+ * @flags: checks for active flags
  * return the number of characters printed
  */
 
