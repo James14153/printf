@@ -13,7 +13,8 @@
 int _printf(const char *format, ...)
 {
 	int j = 0;
-	
+	int flags = 0;
+
 	va_list arguments;
 	int (*function)(va_list);
 	
@@ -31,7 +32,7 @@ int _printf(const char *format, ...)
 				return (-1);
 			function = get_ops(*format);
 			if (function)
-				j += function(arguments);
+				j += function(arguments, flags);
 			else
 			{
 				j += write(1, "%", 1);

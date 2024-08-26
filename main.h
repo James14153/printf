@@ -26,17 +26,17 @@ typedef struct specifier_function
 
 /* functions  used */
 int _printf(const char *format, ...); /* custom printf function prototype */
-int (*get_ops(char a))(va_list);
-int char_print(va_list arguments);
-int str_print(va_list arguments);
-int percent_print(va_list arguments);
+int (*get_ops(char a))(va_list, int);
+int char_print(va_list arguments, int flags);
+int str_print(va_list arguments, int flags);
+int percent_print(va_list arguments, int flags);
 int num_print(va_list arguments, int flags);
-int bin_print(va_list arguments);
+int bin_print(va_list arguments, int flags);
 int octal_print(va_list arguments, int flags);
 int hex_lower_print(va_list arguments, int flags);
 int hex_upper_print(va_list arguments, int flags);
-int unsigned_int_print(va_list arguments);
-int S_print(va_list arguments);
-int p_print(va_list arguments);
+int unsigned_int_print(va_list arguments, int flags);
+int S_print(va_list arguments, int flags);
+int p_print(va_list arguments, int flags);
 
 #endif /* MAIN_H */
