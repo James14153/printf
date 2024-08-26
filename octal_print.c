@@ -3,7 +3,7 @@
 /*
  * octal_print - print numbers in octal form
  * @arguments: the list of arguments tranversed
- *
+ * @flags: checks for active flags
  * return the number of characters printed
  */
 
