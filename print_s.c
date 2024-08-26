@@ -4,12 +4,12 @@
 /*
  * S_print - prints a string based on custom specifier S
  * @arguments: the list of arguments
- *
+ * @flags: checks for active flags
  * return number of chracters printed
  *
  */
 
-int S_print(va_list arguments)
+int S_print(va_list arguments, int flags)
 {
 	char *string = va_arg(arguments, char *);
 	int a;
@@ -18,6 +18,8 @@ int S_print(va_list arguments)
 	char *not_printable = "\\x";
 	char array[1024];
 	int j = 0;
+
+	(void)flags;
 
 	if (!string)
 		string = "This is a null string";
