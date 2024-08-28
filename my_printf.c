@@ -30,6 +30,23 @@ int _printf(const char *format, ...)
 			format++;
 			if (*format == '\0')
 				return (-1);
+			
+			if (*format == '+')
+			{
+				flags |= FLAG_PLUS;
+				format++;
+			}
+			else if (*format == ' ')
+			{
+				flags |= FLAG_SPACE;
+				format++;
+			}
+			else if (*format == '#')
+			{
+				flags |= FLAG_HASH;
+				format++;
+			}
+
 			function = get_ops(*format);
 			if (function)
 				j += function(arguments, flags);
