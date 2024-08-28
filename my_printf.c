@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	int flags = 0;
 
 	va_list arguments;
-	int (*function)(va_list);
+	int (*function)(va_list, int);
 	
 	if (format == NULL)
 		return (-1);

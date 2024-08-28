@@ -8,7 +8,7 @@
  *
  */
 
-int percent_print(va_list argumentis, int flags)
+int percent_print(va_list arguments, int flags)
 {
         (void)arguments;
 	(void)flags;
