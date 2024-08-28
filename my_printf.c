@@ -55,6 +55,7 @@ int _printf(const char *format, ...)
 				j += write(1, "%", 1);
 				j += write(1, format, 1);
 			}
+			flags = 0;
 		}
 		else
 		{
