@@ -39,5 +39,6 @@ int unsigned_int_print(va_list arguments, int flags);
 int S_print(va_list arguments, int flags);
 int p_print(va_list arguments, int flags);
 int reverse_print(va_list arguments, int flags);
+int rot_print(va_list arguments, int flags);
 
 #endif /* MAIN_H */

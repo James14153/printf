@@ -31,6 +31,7 @@ int (*get_ops(char a))(va_list, int)
 		{'S', S_print},
 		{'p', p_print},
 		{'r', reverse_print},
+		{'R', rot_print},
 		{0, NULL}
 	};
 
