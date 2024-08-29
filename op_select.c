@@ -30,6 +30,7 @@ int (*get_ops(char a))(va_list, int)
 		{'X', hex_upper_print},
 		{'S', S_print},
 		{'p', p_print},
+		{'r', reverse_print},
 		{0, NULL}
 	};
 
